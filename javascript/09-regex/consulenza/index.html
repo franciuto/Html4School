@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <title>Prenotazione Consulenza IT</title>
+</head>
+
+<body data-bs-theme="dark">
+    <div class="container" style="max-width: 600px;">
+        <div class="mt-5 mb-5">
+            <h1 class="text-center mb-4">Prenotazione Consulenza IT</h1>
+
+            <!-- Form -->
+            <form id="consultingForm" novalidate>
+
+                <!-- Credenziali -->
+                <h5 class="mb-3">Credenziali</h5>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Nome utente</label>
+                    <input type="text" class="form-control" id="username" />
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Contatti -->
+                <h5 class="mb-3">Contatti</h5>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Numero di telefono</label>
+                    <input type="text" class="form-control" id="telefono" placeholder="10 cifre" />
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="sito" class="form-label">Sito web</label>
+                    <input type="text" class="form-control" id="sito" placeholder="https://esempio.com" />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Dettagli Organizzazione -->
+                <h5 class="mb-3">Dettagli Organizzazione</h5>
+                <div class="mb-3">
+                    <label for="ente" class="form-label">Nome dell'ente o azienda</label>
+                    <input type="text" class="form-control" id="ente" />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Ambito di Consulenza -->
+                <h5 class="mb-3">Ambito di Consulenza</h5>
+                <div id="ambitiGroup" class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input ambito" type="checkbox" id="linux" value="Linux">
+                        <label class="form-check-label" for="linux">Linux</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input ambito" type="checkbox" id="windows" value="Windows">
+                        <label class="form-check-label" for="windows">Windows</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input ambito" type="checkbox" id="android" value="Android">
+                        <label class="form-check-label" for="android">Android</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input ambito" type="checkbox" id="database" value="Database">
+                        <label class="form-check-label" for="database">Database</label>
+                    </div>
+                    <div class="invalid-feedback d-block" id="ambitiError" style="display:none !important;"></div>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Tempistiche -->
+                <h5 class="mb-3">Tempistiche</h5>
+                <div class="mb-4">
+                    <label for="dataRichiesta" class="form-label">Data d'invio della richiesta</label>
+                    <input type="text" class="form-control" id="dataRichiesta" placeholder="AAAA-MM-GG" />
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Invia Richiesta</button>
+            </form>
+
+            <!-- Riepilogo (nascosto inizialmente) -->
+            <div id="riepilogo" class="d-none mt-5">
+                <h2 class="text-center mb-4">Riepilogo Richiesta</h2>
+
+                <div class="card mb-3">
+                    <div class="card-header">Conferma Dati</div>
+                    <ul class="list-group list-group-flush" id="riepilogoLista"></ul>
+                </div>
+
+                <div class="alert alert-info" id="valoreAggiunto"></div>
+
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Data Appuntamento</h5>
+                        <p class="card-text fs-4" id="dataAppuntamento"></p>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary w-100 mt-4" id="btnNuova">Nuova Richiesta</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
