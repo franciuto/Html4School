@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.pumpkin.min.css">
+    <script src="script.js"></script>
+    <title>Form Quiz</title>
+</head>
+
+<body class="container">
+    <h1 style="padding-top: 50px;">Form Quiz</h1>
+    <form novalidate>
+        <fieldset>
+            <div class="grid">
+                <label>
+                    Nome
+                    <input type="text" id="nome" name="nome" placeholder="Nome" />
+                    <small id="nome-error" aria-live="polite"></small>
+                </label>
+                <label>
+                    Cognome
+                    <input type="text" id="cognome" name="cognome" placeholder="Cognome" />
+                    <small id="cognome-error" aria-live="polite"></small>
+                </label>
+                <label>
+                    Classe
+                    <input type="text" id="classe" name="Classe" placeholder="es. 1A" />
+                    <small id="classe-error" aria-live="polite"></small>
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Qual è la capitale della Francia?</legend>
+            <label><input type="radio" name="q1" value="a" /> Berlino</label>
+            <label><input type="radio" name="q1" value="b" /> Madrid</label>
+            <label><input type="radio" name="q1" value="c" /> Parigi</label>
+            <label><input type="radio" name="q1" value="d" /> Roma</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Quale pianeta è conosciuto come il Pianeta Rosso?</legend>
+            <label><input type="radio" name="q2" value="a" /> Marte</label>
+            <label><input type="radio" name="q2" value="b" /> Venere</label>
+            <label><input type="radio" name="q2" value="c" /> Giove</label>
+            <label><input type="radio" name="q2" value="d" /> Saturno</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Quanto fa 5 x 6?</legend>
+            <label><input type="radio" name="q3" value="a" /> 25</label>
+            <label><input type="radio" name="q3" value="b" /> 30</label>
+            <label><input type="radio" name="q3" value="c" /> 35</label>
+            <label><input type="radio" name="q3" value="d" /> 40</label>
+        </fieldset>
+
+        <input id="send" type="submit" value="Invia ➡️" />
+    </form>
+    <div id="risultati"></div>
+</body>
+
+</html>
