@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.pumpkin.min.css">
+    <script src="script.js"></script>
+    <title>Esercizio 3 - Tabella pitagorica</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Esercizio 3</h1>
+        <p>Tabella pitagorica: click sulla cella per aggiungere il valore al totale.</p>
+
+        <article>
+            <div class="grid">
+                <label for="ultimoValore">
+                    Ultimo valore cliccato
+                    <input type="text" id="ultimoValore" value="-" readonly>
+                </label>
+                <label for="totaleValori">
+                    Totale
+                    <input type="number" id="totaleValori" value="0" readonly>
+                </label>
+            </div>
+        </article>
+
+        <article>
+            <table id="tabellaPitagorica"></table>
+        </article>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.pumpkin.min.css">
+    <script src="script.js"></script>
+    <title>Esercizio 2 - Tabella casuale</title>
+    <style>
+        .cella-negativa {
+            background-color: #d93526;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Esercizio 2</h1>
+        <p>Creare una tabella con numeri casuali e colorare i valori negativi.</p>
+
+        <article>
+            <div class="grid">
+                <label for="righe">
+                    Righe
+                    <input type="number" id="righe" min="1" value="5">
+                </label>
+                <label for="colonne">
+                    Colonne
+                    <input type="number" id="colonne" min="1" value="5">
+                </label>
+            </div>
+            <button id="generaTabella" type="button">Genera tabella</button>
+            <button id="evidenziaNegativi" type="button" class="secondary">Colora negativi</button>
+        </article>
+
+        <article>
+            <table id="tabellaCasuale"></table>
+        </article>
+    </main>
+</body>
+
+</html>
