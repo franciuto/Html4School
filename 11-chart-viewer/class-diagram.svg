@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="760" viewBox="0 0 1260 760">
+  <style>
+    .bg { fill: #f3f4f6; }
+    .box { fill: #ffffff; stroke: #1f2937; stroke-width: 2; }
+    .title { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #111827; }
+    .subtitle { font-family: sans-serif; font-size: 15px; fill: #4b5563; }
+    .text { font-family: sans-serif; font-size: 16px; fill: #111827; }
+    .small { font-family: sans-serif; font-size: 15px; fill: #374151; }
+    .arrow { stroke: #1f2937; stroke-width: 2; fill: none; marker-end: url(#endArrow); }
+    .dash { stroke-dasharray: 6 5; }
+  </style>
+  <defs>
+    <marker id="endArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#1f2937" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1260" height="760" />
+
+  <rect class="box" x="40" y="40" width="410" height="250" rx="10" />
+  <text class="title" x="64" y="78">FunzioneMatematica</text>
+  <text class="subtitle" x="64" y="102">(MathFunction)</text>
+  <line x1="52" y1="116" x2="438" y2="116" stroke="#1f2937" stroke-width="1.5" />
+  <text class="text" x="64" y="152">+ chiave: string</text>
+  <text class="text" x="64" y="182">+ etichetta: string</text>
+  <text class="text" x="64" y="212">+ parametri: ParamDef[]</text>
+  <line x1="52" y1="228" x2="438" y2="228" stroke="#1f2937" stroke-width="1.5" />
+  <text class="small" x="64" y="262">+ valuta(x, parametri): number</text>
+
+  <rect class="box" x="500" y="40" width="320" height="200" rx="10" />
+  <text class="title" x="524" y="78">FunzioneLineare</text>
+  <text class="subtitle" x="524" y="102">(LinearFunction)</text>
+  <line x1="512" y1="116" x2="808" y2="116" stroke="#1f2937" stroke-width="1.5" />
+  <text class="small" x="524" y="152">+ valuta(x, {m, q}): number</text>
+
+  <rect class="box" x="860" y="40" width="360" height="200" rx="10" />
+  <text class="title" x="884" y="78">FunzioneQuadratica</text>
+  <text class="subtitle" x="884" y="102">(QuadraticFunction)</text>
+  <line x1="872" y1="116" x2="1208" y2="116" stroke="#1f2937" stroke-width="1.5" />
+  <text class="small" x="884" y="152">+ valuta(x, {a, b, c}): number</text>
+
+  <rect class="box" x="240" y="360" width="780" height="320" rx="10" />
+  <text class="title" x="264" y="398">ControlloreGrafico</text>
+  <text class="subtitle" x="264" y="422">(ChartController)</text>
+  <line x1="252" y1="436" x2="1008" y2="436" stroke="#1f2937" stroke-width="1.5" />
+  <text class="small" x="264" y="472">- registro:</text>
+  <text class="small" x="288" y="498">lineare: LinearFunction</text>
+  <text class="small" x="288" y="524">parabola: QuadraticFunction</text>
+  <text class="small" x="264" y="556">- grafico: google.visualization.LineChart</text>
+  <text class="small" x="264" y="588">+ disegna(): void</text>
+  <text class="small" x="264" y="620">+ renderizzaInputParametri(): void</text>
+
+  <path class="arrow dash" d="M630 360 L630 290" />
+  <path class="arrow" d="M630 284 L245 170" />
+  <path class="arrow" d="M630 284 L660 190" />
+  <path class="arrow" d="M630 284 L1040 190" />
+
+  <text class="small" x="642" y="330">usa</text>
+  <text class="small" x="458" y="236">eredita</text>
+  <text class="small" x="944" y="236">eredita</text>
+</svg>
